@@ -1,9 +1,11 @@
 #!/bin/bash
 
-if [[ ! -z "$1" ]]
+ARGS="testfile.dat"
+
+if [[ $# -gt 1 ]]
 then
-    ARGS="-s $1"
+    ARGS=$*
 fi
 
-./append-write -n $SLURM_PROCID $ARGS testfile.dat
+./append-write -n $SLURM_PROCID $ARGS
 

@@ -45,7 +45,7 @@ int main( int argc, char *argv[] )
     FD_ZERO( &zero_fd );
 
     char ch;
-    while ((ch = getopt(argc, argv, "s:n:")) != -1)
+    while ((ch = getopt(argc, argv, "s:n:c:")) != -1)
     {
          switch (ch)
          {
@@ -56,6 +56,10 @@ int main( int argc, char *argv[] )
          case 'n':
              proc_id = atoi( optarg );
              break;
+
+	 case 'c':
+	     proc_iters = atoi( optarg );
+	     break;
 
          default:
              usage( progname, "Incorrect arguments" );
