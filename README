@@ -1,0 +1,6 @@
+Filesystem test utility for POSIX compliance in handling of O_APPEND
+
+The test file run-test.sh will run a test with randomly-generated parameters.
+
+It uses Slurm to parallelise the jobs.
+
